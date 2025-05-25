@@ -1,0 +1,259 @@
+/* Base styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: lightgray;
+    color: black;
+    font-family: monospace, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+a {
+    transition: color 0.3s ease, border 0.3s ease;
+}
+
+/* Navigation */
+nav {
+    margin-top: 1em;
+    padding: 1em 0;
+    text-align: center;
+    flex: 0 0 10%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+    line-height: 3em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gray;
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+
+#home {
+    color: black;
+}
+
+/* Main content */
+.main-content {
+    border: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em;
+    margin: 1em auto;
+    min-height: 70vh;
+    width: 80%;
+    flex: 1 0 auto;
+    position: relative;
+    overflow-y: auto;
+}
+
+/* Bio Section */
+.name-bio {
+    width: 55%;
+    margin-bottom: auto;
+}
+
+.name-bio h1 {
+    font-size: 3em;
+}
+
+.name-bio p {
+    font-size: 1.5em;
+}
+
+/* Resume & Social Links */
+.my-links {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    width: fit-content;
+}
+
+.my-resume,
+.my-email {
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: flex-start;
+}
+
+.my-resume a,
+.my-email a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 0.5em;
+}
+
+.my-resume a:hover,
+.my-email a:hover {
+    color: gray;
+    border: 2px solid gray;
+}
+
+.social-links {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 2px;
+}
+
+.social-links a:hover {
+    border: 2px solid gray;
+    color: gray;
+}
+
+/* Profile Image */
+.profile-image {
+    position: absolute;
+    bottom: -1em;
+    right: -2.5em;
+    width: 35%;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    height: auto;
+    display: block;
+}
+
+/* Footer */
+footer {
+    color: black;
+    text-align: center;
+    padding: 1em 0;
+    flex: 0 0 10%;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        width: 98%;
+        padding: 1em;
+        margin: 1em 0;
+    }
+
+    .name-bio,
+    .my-links,
+    .profile-image {
+        width: 100%;
+        position: static;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .my-resume,
+    .my-email,
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .profile-image img {
+        max-width: 90%;
+    }
+
+    .name-bio h1 {
+        font-size: 2.2em;
+    }
+
+    .name-bio p,
+    .my-resume a,
+    .my-email a {
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+}
+
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1e1e1e;
+        color: #f0f0f0;
+    }
+
+    #home {
+        color: white;
+    }
+    #work,
+    #accomplishment {
+        color: gray;
+    }
+
+    #work:hover,
+    #accomplishment:hover {
+        color: white;
+    }
+
+    nav ul li a,
+    .my-resume a,
+    .social-links a,
+    .my-email a {
+        color: #f0f0f0;
+        border-color: #f0f0f0;
+    }
+
+    nav ul li a:hover,
+    .my-resume a:hover,
+    .social-links a:hover,
+    .my-email a:hover {
+        color: #999;
+        border-color: #999;
+    }
+    
+
+    .main-content {
+        border: solid #fff;
+    }
+
+    footer {
+        color: #ccc;
+    }
+}
