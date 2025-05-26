@@ -217,19 +217,6 @@ footer {
         color: #f0f0f0;
     }
 
-  
-    #work,
-    #home,
-    #accomplishment {
-        color: white;
-    }
-
-    #work:hover,
-    #accomplishment:hover,
-    #home:hover {
-        color: gray;
-    }
-
     nav ul li a,
     .my-resume a,
     .social-links a,
