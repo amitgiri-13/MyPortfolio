@@ -262,6 +262,36 @@ footer {
     flex: 0 0 10%;
 }
 
+.my-associations {
+    padding: 2rem;
+    text-align: center;
+}
+
+.my-associations h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.my-associations .association {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.my-associations .association img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.my-associations .association img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
 /* Responsive Design */
 @media (max-width: 800px) {
 
