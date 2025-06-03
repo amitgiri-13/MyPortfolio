@@ -313,7 +313,8 @@ footer {
     .my-resume a,
     .my-email a,
     .my-works p,
-    .my-skills p {
+    .my-skills p,
+    .my-education p {
         font-size: 1.2em;
     }
 
